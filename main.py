@@ -11,4 +11,5 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 if __name__ == "__main__":
 	app = ApplicationBuilder().token(os.getenv("BOT_TOKEN")).build()
 	app.add_handler(CommandHandler("hello", hello))
+	print('⚡ Bot is running!...')
 	app.run_polling()
